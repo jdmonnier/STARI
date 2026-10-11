@@ -673,3 +673,11 @@ a[aria-current="page"] { border-color: var(--brand); }
 @media (min-width: 900px) { .support-intro .container { grid-template-columns: 1.3fr 1fr; } }
 @media (max-width: 520px) { header .links { justify-content: flex-start; } .support-intro .cta .btn { width: 100%; } }
 @media (prefers-reduced-motion: reduce) { .news-slider { scroll-behavior: auto; } }
+
+/* Contact form and email draft. */
+.contact-card form[hidden] { display: none; }
+.contact-card input, .contact-card textarea, .contact-card select { min-width: 0; width: 100%; }
+.contact-card button { font: inherit; cursor: pointer; min-height: 44px; }
+.contact-card details { margin-top: 1rem; }
+.contact-card summary { cursor: pointer; padding-block: .5rem; }
+.contact-card details .field-group + .field-group { margin-top: .75rem; }

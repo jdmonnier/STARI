@@ -8,6 +8,7 @@
  
 <link rel="stylesheet" href="CSS/main.css">
 <script src="js/carousal.js" defer></script>
+<script src="js/contact.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -253,9 +254,62 @@ Launch is planned for 2029, followed by several months of formation-flying exper
         <article class="card contact-card">
           <h3>Get in touch</h3>
           <p class="sub">
-            Have questions about STARI, collaboration ideas, or media inquiries? 
-            Send us a note and we’ll get back to you.
+            Interested in donations, funding, collaboration, or the mission?
+            Tell us how you’d like to get involved.
           </p>
+
+          <form id="contact-form" hidden aria-describedby="contact-help">
+            <p id="contact-help" class="contact-meta">Prepare a message to John Monnier. You’ll review and send it using your email app.</p>
+            <div class="field-inline">
+              <div class="field-group">
+                <label for="contact-name">Name (required)</label>
+                <input id="contact-name" name="name" autocomplete="name" maxlength="100" required>
+              </div>
+              <div class="field-group">
+                <label for="contact-email">Email (required)</label>
+                <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+              </div>
+            </div>
+            <div class="field-inline">
+              <div class="field-group">
+                <label for="contact-organization">Organization (optional)</label>
+                <input id="contact-organization" name="organization" autocomplete="organization" maxlength="150">
+              </div>
+              <div class="field-group">
+                <label for="contact-reason">Reason for contact (required)</label>
+                <select id="contact-reason" name="reason" required>
+                  <option value="">Select a topic</option>
+                  <option value="funding">Donations &amp; funding</option>
+                  <option value="collaboration">Research &amp; technical collaboration</option>
+                  <option value="student">Student involvement</option>
+                  <option value="media">Media &amp; outreach</option>
+                  <option value="other">General inquiry</option>
+                </select>
+              </div>
+            </div>
+            <p id="funding-help" class="contact-meta" hidden>Tell us whether you’re interested in supporting STARI, broader space interferometry research, or a partnership. We can help identify the appropriate giving route.</p>
+            <div class="field-group">
+              <label for="contact-message">Message (required)</label>
+              <textarea id="contact-message" name="message" rows="6" maxlength="2000" required></textarea>
+            </div>
+            <div><button class="btn primary" type="submit">Prepare email</button></div>
+            <p id="contact-status" role="status" class="contact-meta"></p>
+            <div id="contact-draft" hidden>
+              <div class="actions"><a id="open-contact-email" class="btn primary">Open email app</a></div>
+              <details>
+                <summary>Using webmail? Copy your draft</summary>
+                <p class="contact-meta">Send to monnier@umich.edu with the subject shown below.</p>
+                <div class="field-group">
+                  <label for="draft-subject">Subject</label>
+                  <input id="draft-subject" readonly>
+                </div>
+                <div class="field-group">
+                  <label for="draft-body">Message to copy</label>
+                  <textarea id="draft-body" rows="10" readonly></textarea>
+                </div>
+              </details>
+            </div>
+          </form>
 
           <div class="actions">
             <a class="btn primary" href="mailto:monnier@umich.edu?subject=STARI%20inquiry">Email John Monnier</a>

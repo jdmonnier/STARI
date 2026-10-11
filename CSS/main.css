@@ -697,3 +697,5 @@ a[aria-current="page"] { border-color: var(--brand); }
 .news-archive summary { cursor: pointer; padding: .75rem 0; color: var(--brand-2); }
 .coverage-grid { margin-top: 1rem; }
 @media (min-width: 900px) { .milestone-card.with-photo { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; align-items: center; } }
+
+.team-logos .partner-link:hover, .team-logos .partner-link:focus-visible { border-color: var(--brand); }

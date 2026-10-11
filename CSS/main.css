@@ -681,3 +681,19 @@ a[aria-current="page"] { border-color: var(--brand); }
 .contact-card details { margin-top: 1rem; }
 .contact-card summary { cursor: pointer; padding-block: .5rem; }
 .contact-card details .field-group + .field-group { margin-top: .75rem; }
+
+/* Dated mission updates and publication records. */
+.section-intro { color: var(--muted); line-height: 1.6; margin: 0 0 1.5rem; }
+.section-intro a { text-decoration: underline; text-underline-offset: .2em; }
+.publications-grid .publication-venue, .card .news-date { color: var(--brand-2); font-size: .85rem; margin-bottom: .6rem; }
+.publications-grid .card, .news-slide { line-height: 1.6; }
+.milestone-card { height: auto; padding: clamp(1.25rem, 3vw, 2rem); border-color: rgba(34,211,238,.4); line-height: 1.7; }
+.milestone-card p + p { margin-top: 1rem; }
+.milestone-card figure { margin: 0; min-width: 0; }
+.milestone-card figure img { aspect-ratio: auto; height: auto; width: 100%; object-fit: contain; }
+.milestone-card figcaption { color: var(--muted); font-size: .85rem; margin-top: .5rem; }
+.news-group-title { margin-top: 2rem; }
+.news-archive { margin-top: 2rem; }
+.news-archive summary { cursor: pointer; padding: .75rem 0; color: var(--brand-2); }
+.coverage-grid { margin-top: 1rem; }
+@media (min-width: 900px) { .milestone-card.with-photo { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; align-items: center; } }
